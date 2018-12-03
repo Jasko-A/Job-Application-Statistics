@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 df = pd.read_excel('../jobApplications.xlsx', sep=',', header=0)
 
-#df = pd.DataFrame(data=dataset, columns={"A", "B", "C", "D", "E", "F", "G"})
 dataset = df.values
 #get the values in appropriate arrays
 heardArray = dataset[:,3].astype(int)
@@ -12,7 +11,7 @@ interVarray = dataset[:,4].astype(int)
 offerArray = dataset[:,5].astype(int)
 
 numApps = dataset.shape[0]  # gives number of row count
-#print(count_row)
+
 #count_row = df.shape[0]  # gives number of row count THIS CAN ALSO BE DONE WITH NUMPY ARRAYS!!!
 #count_col = df.shape[1]  # gives number of col count SUCH AS DATASET
 
@@ -48,10 +47,4 @@ axs.set_title("Current Job Application Situation")
 axs.axis('equal')
 plt.show()
 
-#print(numHeard, numInter, numOffer)
-#print(dataset)
-#print (heardArray)
-#heardSize = heardArray.size
-#print (f"array size: {heardSize}")
 
-#print("HELLO!!")
