@@ -30,7 +30,7 @@ for x in offerArray:
 		numOffer += 1
 
 #here we calculate fractions for the pie chart
-print(f"data set size: {numApps}")
+print("data set size: {}".format(numApps))
 heardFrac = numHeard / numApps
 interFrac = numInter / numApps
 offerFrac = numOffer / numApps
@@ -43,7 +43,7 @@ explode = (0.7, 0.5, 0.2, 0)  # only "explode" the 1st, 2nd, 3rd slices (i.e. 'H
 fig, axs = plt.subplots()
 axs.pie(fracs, explode=explode, labels=labels, autopct='%0.1f%%',
         shadow=False, startangle=150)
-axs.set_title("Current Job Application Situation")
+axs.set_title("Current Job Application Situation ({} Applications)".format(numApps) )
 axs.axis('equal')
 plt.show()
 
